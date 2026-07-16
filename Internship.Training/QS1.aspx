@@ -1,0 +1,23 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User.Master" AutoEventWireup="true" CodeBehind="QS1.aspx.cs" Inherits="Internship.Training.QS1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <div class="container mt-3">
+    <h2>Register</h2>
+   
+        <div class="mb-3 mt-3">
+            <label>Name:</label>
+            <asp:TextBox  CssClass="form-control" runat="server" ID="txtName"></asp:TextBox>
+        </div>
+        
+        <div class="mb-3 mt-3">
+            <label>Contact:</label>
+            <asp:TextBox TextMode="Number" CssClass="form-control" runat="server" ID="txtContact"></asp:TextBox>
+        </div>
+        
+      
+        <asp:Button runat="server" ID="btnSubmit" OnClick="btnSubmit_Click" Text="Confirm" CssClass="btn btn-outline-success" />
+        
+  
+</div>
+</asp:Content>

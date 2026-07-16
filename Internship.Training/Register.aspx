@@ -13,7 +13,7 @@
         
         <div class="mb-3 mt-3">
             <label>Contact:</label>
-            <asp:TextBox TextMode="Number" CssClass="form-control" runat="server" ID="txtContact"></asp:TextBox>
+            <asp:TextBox TextMode="Number"  CssClass="form-control" runat="server" ID="txtContact"></asp:TextBox>
         </div>
         
         <div class="mb-3 mt-3">
