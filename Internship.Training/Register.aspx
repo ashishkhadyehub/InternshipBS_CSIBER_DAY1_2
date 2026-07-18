@@ -22,7 +22,7 @@
             <asp:TextBox TextMode="Email" CssClass="form-control" runat="server" ID="txtEmail"></asp:TextBox>
         </div>
         
-        <div class="mb-3 mt-3">
+        <%--<div class="mb-3 mt-3">
             <label>DOB:</label>
            
             <asp:TextBox TextMode="Date" CssClass="form-control" runat="server" ID="txtDOB"></asp:TextBox>
@@ -32,7 +32,7 @@
             <label>Address:</label>
            
             <asp:TextBox TextMode="MultiLine" CssClass="form-control" runat="server" ID="txtAddress"></asp:TextBox>
-        </div>
+        </div>--%>
         
         <div class="mb-3 mt-3">
             <label>City:</label>
@@ -44,7 +44,7 @@
                 <asp:ListItem>Nashik</asp:ListItem>
             </asp:DropDownList>
         </div>
-        <asp:Button runat="server" ID="btnSubmit" Text="Submit" CssClass="btn btn-outline-success" />
+        <asp:Button runat="server" OnClick="btnSubmit_Click" ID="btnSubmit" Text="Submit" CssClass="btn btn-outline-success" />
         
   
 </div>
