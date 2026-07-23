@@ -17,7 +17,11 @@ namespace ERS
         {
             if (Session["EmployeeId"]!=null)
             {
-                GetProfile();
+                if(!IsPostBack)
+                {
+                    GetProfile();
+                }
+                
             }
             else
             {
@@ -48,7 +52,16 @@ namespace ERS
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-
+            con.Close();
+            SqlCommand cmd = new SqlCommand("update EmpRegister set Name=@name,Contact=@contact,Email=@email where Srno=@empid",con);
+            cmd.Parameters.AddWithValue("@name",txtName.Text);
+            cmd.Parameters.AddWithValue("@contact",txtContact.Text);
+            cmd.Parameters.AddWithValue("@email",txtEmail.Text);
+            cmd.Parameters.AddWithValue("@empid", Session["EmployeeId"]);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            //refresh profile
+            GetProfile();
         }
     }
 }
