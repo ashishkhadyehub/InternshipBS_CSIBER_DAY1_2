@@ -20,11 +20,19 @@ namespace dotnetCore.Training.Controllers
 
             //string name = "ABC";
             //return View("Index",name);
-            Student student = new Student();
-            student.Id = 1;
-            student.Name = "Test";
-            student.City = "Mumbai";
-            return View(student);
+
+            //Student student = new Student();
+            //student.Id = 1;
+            //student.Name = "Test";
+            //student.City = "Mumbai";
+            //return View(student);
+          
+            List<Student> students = new List<Student>();
+            students.Add(new Student { Id=1, Name="ABC", City="Kolhapur" });
+            students.Add(new Student { Id=2, Name="PQR", City="Pune" });
+            students.Add(new Student { Id=3, Name="XZR", City="Mumbai" });
+            students.Add(new Student { Id=4, Name="RTY", City="Nashik" });
+            return View(students);
         }
 
         public IActionResult Privacy()
